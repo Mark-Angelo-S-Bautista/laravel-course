@@ -1,17 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::view('/about', 'about');
-
-Route::get('/product/{id}', function(string $id){
-    return "Product ID: " . $id;
-})->whereNumber('id');
-
-Route::get('/sum/{num1}/{num2}', function(float $num1, $num2){
-    return $num1 + $num2;
-})->whereNumber('num1, num2');
+Route::view('/about', 'about')->name('about');
