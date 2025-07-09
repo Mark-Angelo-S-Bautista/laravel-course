@@ -1,6 +1,4 @@
-@extends('layouts.app')
-@section('title', 'Home')
-@section('content')
+<x-app-layout title="Home Page">
     <x-card color='green' bgColor='blue'>
         <x-slot:title class="card-header-blue">Card Title</x-slot:title>
         Card Content 1
@@ -83,7 +81,8 @@
                 <div class="car-items-listing">
                     <div class="car-item card">
                         <a href="/view.html">
-                            <img src="/img/cars/Lexus-RX200t-2016/1.jpeg" alt="" class="car-item-img rounded-t" />
+                            <img src="/img/cars/Lexus-RX200t-2016/1.jpeg" alt=""
+                                class="car-item-img rounded-t" />
                         </a>
                         <div class="p-medium">
                             <div class="flex items-center justify-between">
@@ -107,7 +106,8 @@
                     </div>
                     <div class="car-item card">
                         <a href="/view.html">
-                            <img src="/img/cars/Lexus-RX200t-2016/1.jpeg" alt="" class="car-item-img rounded-t" />
+                            <img src="/img/cars/Lexus-RX200t-2016/1.jpeg" alt=""
+                                class="car-item-img rounded-t" />
                         </a>
                         <div class="p-medium">
                             <div class="flex items-center justify-between">
@@ -131,7 +131,8 @@
                     </div>
                     <div class="car-item card">
                         <a href="/view.html">
-                            <img src="/img/cars/Lexus-RX200t-2016/1.jpeg" alt="" class="car-item-img rounded-t" />
+                            <img src="/img/cars/Lexus-RX200t-2016/1.jpeg" alt=""
+                                class="car-item-img rounded-t" />
                         </a>
                         <div class="p-medium">
                             <div class="flex items-center justify-between">
@@ -458,9 +459,9 @@
         </section>
         <!--/ New Cars -->
     </main>
-@section('footerLinks')
-    @parent
-    <a href="">Link 3</a>
-    <a href="">Link 4</a>
-@endsection
-@endsection
+    @section('footerLinks')
+        @parent
+        <a href="">Link 3</a>
+        <a href="">Link 4</a>
+    @endsection
+</x-app-layout>
